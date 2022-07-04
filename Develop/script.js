@@ -1,26 +1,43 @@
 //Get button to pop up questions about criteria using prompts
-//    Prompt and Confirm
+//    Using Prompt and Confirm
 //length 8-128 - check if valid
 //lowercase, uppercase, numeric, special characters 
 //Need at least 1 type of criteria to create password - Check if valid
 //Run random generator
-//post random password - appears to be done
+//post random password - *appears to be mostly done
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// const lowercase = [];
-// const uppercase = [];
-// const numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const specialChar = [`~`, `!`, `@`, `#`, `$`, `%`, `^`, `&`, `*`, `(`, `)`, `_`, `-`, `+`, `=`, `{`, `[`, `}`, `]`, `|`, `\`, `:`, `;`, `<`, `,`, `>`, `.`, `?`, `/` ];
+const uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lc = "abcdefghijklmnopqrstuvwxyz";
+const num = "0123456789";
+const symb = "!@#$%^&*_-+=";
 
 //create generatePassword Function
 function generatePassword() {
   var length = prompt ("How many characters would you like your password to contain?");
-  var uppercase = confirm ("Would you like to use Uppercase?")
-  var lowercase = confirm ("Would you like to use Lowercase?")
-  var numeric = confirm ("Would you like to use numbers?")
-  var specialChar = confirm ("Would you like to use Special Characters")
+  // for (length < 8, length > 128,) { 
+  //   length = prompt ("Please choose a number between 8 and 128.")
+  // }
+   
+  //for if statement? looping if the lenght isn't the write length.
+  if(length < 8 || length > 128) {
+    length = prompt ("Please choose a number between 8 and 128.")
+  }
 
+  console.log (length);
+
+  var uppercase = confirm ("Would you like to use Uppercase?");
+  var lowercase = confirm ("Would you like to use Lowercase?");
+  var numeric = confirm ("Would you like to use numbers?");
+  var specialChar = confirm ("Would you like to use Special Characters");
+  if (uppercase && lowercase && numeric && specialChar) {
+
+  } else if () {
+
+  } else if () {
+
+  }
 
   return ("Generate Password will go here")
 }
