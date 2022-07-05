@@ -15,27 +15,30 @@ const symb = "!@#$%^&*_-+=";
 
 //create generatePassword Function
 function generatePassword() {
+  //Prompt for input values
   var length = prompt ("How many characters would you like your password to contain?");
-
    
   //Do While loop!
   if (length < 8 || length > 128) {
-  do {
-    length = prompt ("Please choose a number between 8 and 128.")
-  }
-  while (length < 8 || length > 128)
+    do {
+     length = prompt ("Please choose a number between 8 and 128.")
+    }
+    while (length < 8 || length > 128)
   }
 
-  console.log (length);
-
+  // Confirm for character types
   var uppercase = confirm ("Would you like to use Uppercase?");
   var lowercase = confirm ("Would you like to use Lowercase?");
   var numeric = confirm ("Would you like to use Numbers?");
   var specialChar = confirm ("Would you like to use Special Characters");
 
   if (!uppercase && !lowercase && !numeric && !specialChar) {
-    confirm ("Please select at least one type of charcter. Please try again")
+    alert ("Please select at least one type of character. Please try again.")
+    return ("Please select one character type")
   } else {
+    if (uppercase){
+      Math.random ()
+    }
 
   }
 
