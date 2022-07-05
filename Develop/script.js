@@ -19,11 +19,12 @@ function generatePassword() {
 
    
   //Do While loop!
-  
+  if (length < 8 || length > 128) {
   do {
     length = prompt ("Please choose a number between 8 and 128.")
   }
   while (length < 8 || length > 128)
+  }
 
   console.log (length);
 
@@ -31,9 +32,11 @@ function generatePassword() {
   var lowercase = confirm ("Would you like to use Lowercase?");
   var numeric = confirm ("Would you like to use Numbers?");
   var specialChar = confirm ("Would you like to use Special Characters");
-  if (uppercase && lowercase && numeric && specialChar) {
 
-  // else if
+  if (!uppercase && !lowercase && !numeric && !specialChar) {
+    confirm ("Please select at least one type of charcter. Please try again")
+  } else {
+
   }
 
   return ("Generate Password will go here")
