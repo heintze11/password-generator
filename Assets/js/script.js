@@ -57,15 +57,18 @@ function generatePassword() {
   for (let index = 0; index < length; index++) {
     password.push(passwordArray[Math.floor(Math.random()*passwordArray.length)])
   }
- 
+  //remove commas in password array
+  password = password.join("");
+
+  //clear array for next password
   passwordArray = [];
   return (password)
 }
 
 // Write password to the #password input
 function writePassword() {
-  var passwordDisplay = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let passwordDisplay = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = passwordDisplay;
   // clear password for next use
