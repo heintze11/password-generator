@@ -16,5 +16,5 @@ Create a functioning password generator using JavaScript that prompts the user f
 -[Github pages link](https://heintze11.github.io/password-generator/)
 
 ## Screenshot
-![final-screenshot](Assets/images/lh-final-password.PNG)
+![final-screenshot](Assets/images/final-password-screenshot.PNG)
 
