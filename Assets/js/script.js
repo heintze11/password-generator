@@ -57,7 +57,7 @@ function generatePassword() {
   for (let index = 0; index < length; index++) {
     password.push(passwordArray[Math.floor(Math.random()*passwordArray.length)])
   }
-  //remove commas in password array
+  //remove commas in password array using Join method
   password = password.join("");
 
   //clear array for next password
